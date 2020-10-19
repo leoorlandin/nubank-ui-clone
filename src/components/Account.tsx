@@ -5,7 +5,7 @@ import { Feather } from '@expo/vector-icons';
 
 export default function Account() {
   return (
-    <View style={styles.cardInvoice}>
+    <View style={styles.accountStatus}>
           <View style={styles.account}>
 
             <Feather name="dollar-sign" color="rgba(0,0,0, 0.6)" size={22} />
@@ -14,7 +14,7 @@ export default function Account() {
           </View>
 
           <View style={styles.currentBill}>
-            <Text style={styles.billText}>Saldo disponível</Text>
+            <Text style={styles.balanceText}>Saldo disponível</Text>
             <Text style={styles.balance}>R$ 0,00</Text>
           </View>
 
@@ -23,7 +23,7 @@ export default function Account() {
 };
 
 const styles = StyleSheet.create({
-  cardInvoice: {
+  accountStatus: {
     padding: 20,
     marginVertical: 5,
     backgroundColor: '#fff',
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   currentBill: {
 
   },
-  billText: {
+  balanceText: {
     color: 'rgba(0,0,0, 0.6)',
     marginVertical: 10,
   },

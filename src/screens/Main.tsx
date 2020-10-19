@@ -5,6 +5,7 @@ import { Feather } from '@expo/vector-icons';
 
 import CardInvoice from '../components/CardInvoice';
 import Account from '../components/Account';
+import Rewards from '../components/Rewards';
 
 
 export default function Main() {
@@ -24,7 +25,8 @@ export default function Main() {
         </View>
 
         <CardInvoice />
-        <Account/>
+        <Account />
+        <Rewards />
 
       </View>
     </View>
