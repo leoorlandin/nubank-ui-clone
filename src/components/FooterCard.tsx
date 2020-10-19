@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-
-
 interface CardTypes {
   iconName: string
   textContent: string,
@@ -28,7 +26,6 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     justifyContent: "space-between",
     marginRight: 8,
-    // marginLeft: -3,
   },
   footerCardText: {
     color: "#fff",

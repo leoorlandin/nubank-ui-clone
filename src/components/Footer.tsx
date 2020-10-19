@@ -1,15 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import { Feather } from '@expo/vector-icons';
-import {} from '@expo/vector-icons';
+import { View, StyleSheet, ScrollView } from 'react-native';
 
 import FooterCard from '../components/FooterCard';
-
 
 export default function Footer() {
   return (
     <View style={styles.footerContainer}>
-      <ScrollView style={styles.footer} horizontal={true}>
+      <ScrollView style={styles.footer} horizontal={true} alwaysBounceHorizontal={true}>
         <FooterCard textContent="Pix" iconName="command"/>
         <FooterCard textContent="Pagar" iconName="dollar-sign"/>
         <FooterCard textContent="Transferir" iconName="corner-down-right"/>
@@ -25,9 +22,7 @@ export default function Footer() {
 const styles = StyleSheet.create({
   footer: {
     paddingVertical: 15,
-
     flexDirection: 'row',
-
     marginTop: 10,
   },
   footerContainer: {
