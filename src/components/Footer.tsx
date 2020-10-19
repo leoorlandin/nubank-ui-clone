@@ -27,5 +27,6 @@ const styles = StyleSheet.create({
   },
   footerContainer: {
     paddingHorizontal: 20,
+    marginRight: -20,
   },
 })
