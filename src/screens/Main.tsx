@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 
@@ -12,23 +12,26 @@ export default function Main() {
   return (
     <View style={styles.background}>
 
-      <View style={styles.container}>
-
-
-
-        <View style={styles.header}>
-          <Text style={styles.headerText}>Olá, Leonardo</Text>
-          <View style={styles.headerIcons}>
-            <Feather name="eye-off" color="#fff" size={24} style={styles.eyeIcon} />
-            <Feather name="settings" color="#fff" size={24} style={styles.gearIcon} />
-          </View>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Olá, Leonardo</Text>
+        <View style={styles.headerIcons}>
+          <Feather name="eye-off" color="#fff" size={24} style={styles.eyeIcon} />
+          <Feather name="settings" color="#fff" size={24} style={styles.gearIcon} />
         </View>
+      </View>
+
+      <ScrollView style={styles.container}>
+
+
 
         <CardInvoice />
         <Account />
         <Rewards />
+        <Rewards />
 
-      </View>
+
+
+      </ScrollView>
     </View>
   )
 };
@@ -37,18 +40,22 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     backgroundColor: '#8A05BE',
+    position: "relative"
   },
   container: {
     position: "relative",
-    paddingVertical: 50,
     paddingHorizontal: 20,
   },
   header: {
+    paddingVertical: 10,
+    paddingHorizontal: 20,
     alignItems: "center",
     justifyContent: "space-between",
 
     flexDirection: 'row',
-    marginBottom: 10,
+
+    marginTop: 40,
+
   },
   headerText: {
     fontSize: 32,
