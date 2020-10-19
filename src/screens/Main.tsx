@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import CardInvoice from '../components/CardInvoice';
 import Account from '../components/Account';
 import Rewards from '../components/Rewards';
+import Footer from '../components/Footer';
 
 
 export default function Main() {
@@ -15,12 +16,14 @@ export default function Main() {
 
       <Header />
 
-      <ScrollView style={styles.container}>
+      <ScrollView style={styles.container} >
         <CardInvoice />
         <Account />
         <Rewards />
-        <Rewards />
       </ScrollView>
+
+      <Footer />
+
     </View>
   )
 };
