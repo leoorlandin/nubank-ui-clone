@@ -6,25 +6,26 @@ import { Feather } from '@expo/vector-icons';
 export default function CardInvoice() {
   return (
     <View style={styles.cardInvoice}>
-          <View style={styles.creditCard}>
+      <View style={styles.creditCard}>
 
-            <Feather name="credit-card" color="rgba(0,0,0, 0.6)" size={22} />
-            <Text style={styles.creditCardText}>Cartão de Crédito</Text>
+        <Feather name="credit-card" color="rgba(0,0,0, 0.6)" size={22} />
+        <Text style={styles.creditCardText}>Cartão de Crédito</Text>
 
-          </View>
+      </View>
 
-          <View style={styles.currentBill}>
-            <Text style={styles.billText}>Fatura Atual</Text>
-            <Text style={styles.billValue}>R$ 146,54</Text>
-          </View>
+      <View style={styles.currentBill}>
+        <Text style={styles.billText}>Fatura Atual</Text>
+        <Text style={styles.billValue}>R$ 146,54</Text>
+      </View>
 
-          <View style={styles.availableCredit}>
-            <Text style={styles.availableCreditText}>Limite Disponível</Text>
-            <Text style={styles.availableCreditValue}>RS 1.844,16</Text>
-          </View>
+      <View style={styles.availableCredit}>
+        <Text style={styles.availableCreditText}>Limite Disponível</Text>
+        <Text style={styles.availableCreditValue}>RS 1.844,16</Text>
+      </View>
 
+      <View style={styles.invoiceBlur}></View>
 
-        </View>
+    </View>
   );
 };
 
@@ -35,6 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 4,
     marginTop: 15,
+    position: "relative",
   },
   creditCard: {
     flexDirection: 'row',
@@ -46,7 +48,15 @@ const styles = StyleSheet.create({
     fontSize: 16
   },
   currentBill: {
-
+  },
+  invoiceBlur: {
+    position: "absolute",
+    width: "100%",
+    height: 47,
+    backgroundColor: "linear-gradient(90deg, rgba(204,204,204,1) 0%, rgba(255,255,255,1) 100%)",
+    bottom: 21,
+    left: 20,
+    opacity: 1,
   },
   billText: {
     color: 'rgba(0,0,0, 0.6)',

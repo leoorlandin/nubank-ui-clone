@@ -16,6 +16,7 @@ export default function Account() {
           <View style={styles.currentBill}>
             <Text style={styles.balanceText}>Saldo disponível</Text>
             <Text style={styles.balance}>R$ 0,00</Text>
+            <View style={styles.balanceBlur}></View>
           </View>
 
         </View>
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     fontSize: 16
   },
   currentBill: {
-
+    position: "relative",
   },
   balanceText: {
     color: 'rgba(0,0,0, 0.6)',
@@ -50,5 +51,12 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: 'bold',
     fontSize: 30,
+  },
+  balanceBlur: {
+    position: "absolute",
+    height: 31,
+    width: "100%",
+    backgroundColor: "linear-gradient(90deg, rgba(204,204,204,1) 0%, rgba(255,255,255,1) 100%)",
+    top: 45,
   },
 });
