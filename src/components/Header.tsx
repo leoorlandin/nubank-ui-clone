@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 
 export default function Header() {
+
+  const [visibility, setVisibility] = useState("eye-off");
+
+  const handleVisibilityButton = () => {
+    setVisibility(visibility === "eye-off" ? "eye" : "eye-off")
+  }
+
   return (
     <View style={styles.header}>
       <Text style={styles.headerText}>Olá, Leonardo</Text>
       <View style={styles.headerIcons}>
-        <Feather name="eye-off" color="#fff" size={24} style={styles.eyeIcon} />
+        <Feather 
+          name={visibility} 
+          color="#fff" size={24} 
+          style={styles.eyeIcon} 
+          onPress={handleVisibilityButton}
+        />
         <Feather name="settings" color="#fff" size={24} style={styles.gearIcon} />
       </View>
     </View>

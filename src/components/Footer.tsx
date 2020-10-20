@@ -13,6 +13,12 @@ export default function Footer() {
         <FooterCard textContent="Depositar" iconName="plus-circle"/>
         <FooterCard textContent="Indicar amigos" iconName="user-plus"/>
         <FooterCard textContent="Recarga de celular" iconName="smartphone"/>
+        <FooterCard textContent="Ajustar limite" iconName="git-commit"/>
+        <FooterCard textContent="Bloquear cartão" iconName="unlock"/>
+        <FooterCard textContent="Cobrar" iconName="dollar-sign"/>
+        <FooterCard textContent="Doação" iconName="dollar-sign"/>
+        <FooterCard textContent="Me ajuda" iconName="help-circle"/>
+        <FooterCard textContent="Cartão virtual" iconName="credit-card"/>
       </ScrollView>
     </View>
 

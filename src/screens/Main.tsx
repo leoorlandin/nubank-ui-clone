@@ -13,7 +13,7 @@ export default function Main() {
 
       <Header />
 
-      <ScrollView style={styles.container} bounces={true} alwaysBounceVertical={true}>
+      <ScrollView style={styles.container} >
         <CardInvoice />
         <Account />
         <Rewards />
