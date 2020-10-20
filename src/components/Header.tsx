@@ -11,6 +11,8 @@ export default function Header() {
     setVisibility(visibility === "eye-off" ? "eye" : "eye-off")
   }
 
+  
+
   return (
     <View style={styles.header}>
       <Text style={styles.headerText}>Olá, Leonardo</Text>

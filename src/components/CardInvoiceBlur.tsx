@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 
-export default function CardInvoice() {
+export default function CardInvoiceBlur() {
   return (
     <View style={styles.cardInvoice}>
       <View style={styles.creditCard}>
@@ -15,12 +15,7 @@ export default function CardInvoice() {
 
       <View style={styles.currentBill}>
         <Text style={styles.billText}>Fatura Atual</Text>
-        <Text style={styles.billValue}>R$ 146,54</Text>
-      </View>
-
-      <View style={styles.availableCredit}>
-        <Text style={styles.availableCreditText}>Limite Disponível</Text>
-        <Text style={styles.availableCreditValue}>RS 1.844,16</Text>
+        <View style={styles.invoiceBlur}></View>
       </View>
     </View>
   );
@@ -50,21 +45,10 @@ const styles = StyleSheet.create({
     color: 'rgba(0,0,0, 0.6)',
     marginVertical: 10,
   },
-  billValue: {
-    color: '#05B8C4',
-    fontWeight: 'bold',
-    fontSize: 22,
+  invoiceBlur: {
+    width: "100%",
+    height: 53,
+    backgroundColor: "linear-gradient(90deg, rgba(204,204,204,1) 0%, rgba(255,255,255,1) 100%)",
+    opacity: .5,
   },
-  availableCredit: {
-    flexDirection: 'row',
-    marginTop: 5,
-  },
-  availableCreditText: {
-    color: 'rgba(0,0,0, 0.6)',
-    marginRight: 5,
-  },
-  availableCreditValue: {
-    fontWeight: 'bold',
-    color: 'green',
-  }
 });

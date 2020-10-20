@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 
-export default function Account() {
+export default function AccountBlur() {
   return (
     <View style={styles.accountStatus}>
       <View style={styles.account}>
@@ -15,7 +15,7 @@ export default function Account() {
 
       <View style={styles.currentBill}>
         <Text style={styles.balanceText}>Saldo disponível</Text>
-        <Text style={styles.balance}>R$ 0,00</Text>
+        <View style={styles.accountBlur}></View>
 
       </View>
 
@@ -40,16 +40,17 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontSize: 16
   },
+  accountBlur: {
+    width: "100%",
+    height: 40,
+    backgroundColor: "linear-gradient(90deg, rgba(204,204,204,1) 0%, rgba(255,255,255,1) 100%)",
+    opacity: .5,
+  },
   currentBill: {
     position: "relative",
   },
   balanceText: {
     color: 'rgba(0,0,0, 0.6)',
     marginVertical: 10,
-  },
-  balance: {
-    color: '#000',
-    fontWeight: 'bold',
-    fontSize: 30,
   },
 });
